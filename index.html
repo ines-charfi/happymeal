@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site HappyMeal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+            
+
+        <header class="bg-danger text-white py-3">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h1 class="m-0"><img src="../images/logo.png" alt="logo" width="50px" height="50px"><i class="fas fa-utensils me-2"></i>Happy Meal</h1>
+                    <nav>
+                        <ul class="nav">
+                            <li class="nav-item"><a href="index.html" class="nav-link text-white active" id="home-link">Accueil</a></li>
+                            <li class="nav-item"><a href="recettes.html" class="nav-link text-white" id="recipes-link">Toutes les recettes</a></li>
+                            <li class="nav-item"><a href="favoris.html" class="nav-link text-white" id="favorites-link">Favoris</a></li>
+                            <li class="nav-item"><a href="listedecourses.html" class="nav-link text-white" id="shopping-link">Liste de courses</a></li>
+                            <li class="nav-item"><a href="planning.html" class="nav-link text-white" id="planning-link">Planning</a></li>
+                            
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+       
+        
+    </header>
+
+    <main class="container my-4">
+        <!-- Page d'accueil -->
+        <section id="home-page">
+            <div class="hero-section bg-light p-5 rounded mb-4 text-center">
+                <h2 class="display-4">Découvrez de délicieuses recettes</h2>
+                <p class="lead">Trouvez l'inspiration pour vos prochains repas</p>
+                <div class="search-container mt-4">
+                    <div class="input-group">
+                        <input type="text" id="search-input" class="form-control form-control-lg" placeholder="Rechercher une recette ou un ingrédient...">
+                        <button class="btn btn-danger" id="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div id="autocomplete-results" class="autocomplete-results"></div>
+                    <div id="results-container" class="mt-4"></div>
+                       
+                </div>
+            </div>
+        <h2>Nos recettes favorites pour aujoud'hui</h2><br>
+        <div class="row" id="random-recipes"></div>
+      <!-- Modal pour afficher les détails d'une recette -->
+<div class="modal fade" id="recipeModal" tabindex="-1" aria-labelledby="recipeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="recipeModalTitle">Titre de la recette</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img id="recipeModalImage" src="" class="img-fluid" alt="Image de la recette">
+                <p><strong>Temps de préparation:</strong> <span id="recipeModalTime"></span></p>
+                <p><strong>Catégorie:</strong> <span id="recipeModalCategory"></span></p>
+                <h6>Ingrédients:</h6>
+                <ul id="recipeModalIngredients"></ul>
+                <h6>Étapes:</h6>
+                <ol id="recipeModalSteps"></ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </main>
+
+   
+
+    <script src="main.js" defer></script>
+</body>
+<footer class="bg-dark text-white py-3">
+    <div class="container text-center">
+        <p>&copy; 2023 Happy Meal. Tous droits réservés.</p>
+    </div>
+</footer>
+</html>
